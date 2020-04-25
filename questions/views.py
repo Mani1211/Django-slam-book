@@ -17,7 +17,6 @@ def questions(request):
         questions = Questions()
         questions.name  = request.POST['name']
         questions.number  = request.POST['number']
-        questions.number = int(questions.number)
         questions.advice  = request.POST['advice']
         questions.positive = request.POST['positive']
         questions.weakness  = request.POST['weakness']
@@ -25,6 +24,9 @@ def questions(request):
         questions.words  = request.POST['words']
         questions.memory  = request.POST['memory']
         questions.save()
-        return render(request,'thank.html')
+        return redirect('thank')
     else:
         return render(request,'questions.html')
+
+def thank(request):
+    return render(request,'thank.html')
