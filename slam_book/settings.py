@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'slam_book.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'slambook',
+        'NAME': 'crud',
         'USER':'postgres',
         'PASSWORD':'1234',
         'HOST':'localhost'
@@ -91,9 +91,9 @@ DATABASES = {
 
 
 
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation

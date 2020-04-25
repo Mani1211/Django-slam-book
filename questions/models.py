@@ -13,5 +13,6 @@ class Questions(models.Model):
     like = models.CharField(max_length=255)
     words = models.CharField(max_length=255)
     memory = models.CharField(max_length=255)
-    talents = models.CharField(max_length=255)
-    change = models.CharField(max_length=255)
+   
+    def __str__(self):
+        return self.name

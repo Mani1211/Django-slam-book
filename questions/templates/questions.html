@@ -24,7 +24,7 @@
 
 			<form class="contact-form validate-form" action="questions" method="Post">
 				{% csrf_token %}
-			   <h1>Hi, {{name}}</h1><br>
+			   <h1>Hi,{{name}} </h1><br>
 
                 <div class="wrap-input100 " >
 					<input class="input100" type="text" name="name" placeholder="Name">
@@ -32,9 +32,12 @@
 				</div>
 
                 <div class="wrap-input100 " >
-					<input class="input100" type="text" name="number" placeholder="Phone Number">
+					<input class="input100" type="number" name="number" placeholder="Phone Number">
 					<span class="focus-input100"></span>
 				</div>
+
+				
+         
 
                 <div class="wrap-input100 " >
 					<input class="input100" type="text" name="advice" placeholder="Advice for me. ">
@@ -67,15 +70,7 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 " >
-					<input class="input100" type="text" name="talents" placeholder="My talents">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 " >
-					<input class="input100" type="text" name="change" placeholder="One thing i want to change">
-					<span class="focus-input100"></span>
-				</div>
+				
 					<div class="button">
 
 						<button type="submit" class="btn btn-primary">submit</button>
@@ -85,6 +80,7 @@
 							padding-left: 200px;
 						}
 					</style>
+
 			</form>
 
 		</div>
