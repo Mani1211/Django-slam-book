@@ -23,6 +23,7 @@ def questions(request):
         questions.like  = request.POST['like']
         questions.words  = request.POST['words']
         questions.memory  = request.POST['memory']
+        print(request.POST)
         questions.save()
         return redirect('thank')
     else:
